@@ -1,6 +1,3 @@
-#My Gulp Setup
-
-```
 var  	gulp = require ('gulp')
 	uglify = require('gulp-uglify')
 	sass = require('gulp-ruby-sass')
@@ -50,4 +47,3 @@ gulp.task('watch', function(){ /*this is a build in watch method*/
 
 
 gulp.task('default', ['scripts',  'styles', 'image', 'watch' ]);
-```
