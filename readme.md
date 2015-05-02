@@ -2,12 +2,12 @@
 
 ```
 var 	gulp = require ('gulp')
-	uglify = require('gulp-uglify')
-	sass = require('gulp-ruby-sass')
-	plumber = require('gulp-plumber')
-	concat = require('gulp-concat')
-	imagemin = require('gulp-imagemin')
-	prefix = require('gulp-autoprefixer');
+		uglify = require('gulp-uglify')
+		sass = require('gulp-ruby-sass')
+		plumber = require('gulp-plumber')
+		concat = require('gulp-concat')
+		imagemin = require('gulp-imagemin')
+		prefix = require('gulp-autoprefixer');
 
 // Minification of Javascript file
 // Uglifies 
@@ -16,9 +16,7 @@ gulp.task('scripts', function(){
 	.pipe(plumber() )
 	.pipe(uglify()) /*uglify*/
 	.pipe(gulp.dest('build/js'))
-	// .pipe(livereload());
 	
-	// .pipe(connect.reload());
 });
 
 // Sass
@@ -30,8 +28,7 @@ gulp.task('styles', function() {
     		.pipe(prefix('last 2 versions'))
 	    	.pipe(concat('style.css'))
 	        	.pipe(gulp.dest('./'))
-	       	// .pipe(livereload());
-	    	// .pipe(connect.reload());
+	       	
 });
 
 // Image task
