@@ -13,12 +13,10 @@ gulp.task('scripts', function(){
 	.pipe(plumber() )
 	.pipe(uglify()) /*uglify*/
 	.pipe(gulp.dest('build/js'))
-	// .pipe(livereload());
 	
-	// .pipe(connect.reload());
 });
 
-// Sass
+// Sass styling
 gulp.task('styles', function() {
     return sass('sass/', {
 	     style: 'expanded' 
@@ -27,8 +25,7 @@ gulp.task('styles', function() {
     		.pipe(prefix('last 2 versions'))
 	    	.pipe(concat('style.css'))
 	        	.pipe(gulp.dest('./'))
-	       	// .pipe(livereload());
-	    	// .pipe(connect.reload());
+	       	
 });
 
 // Image task
